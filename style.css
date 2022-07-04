@@ -4,6 +4,7 @@ html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 body {
@@ -11,6 +12,8 @@ body {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
 }
+
+/* Sidebar */
 
 .sidebar {
   grid-row: 1 / -1;
@@ -26,7 +29,6 @@ body {
   row-gap: 3vh;
   font-size: 1.2rem;
   color: white;
-  font-weight: 1000;
 }
 
 .sidebar div.sidebar-title {
@@ -45,11 +47,103 @@ body {
   align-self: start;
 }
 
+/* Header */
+
 .header {
   box-shadow: 0 5px 10px rgb(200,200,200);
   margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 3fr;
+  padding: 10px;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  place-content: center;
+  gap: 1vw;
+}
+
+#search-bar {
+  height: 24px;
+  width: 40vw;
+  background-color: rgb(230,230,240);
+  outline: none;
+  border: 1px solid rgb(230,230,240);
+  border-radius: 12px;
+  padding-left: clamp(4px,1vw,8px);
+}
+
+.search-bar > label {
+  height: 24px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px,3vw,24px);
+}
+
+.profile-picture {
+  background-color: orange;
+}
+
+.user-info .profile-picture {
+  height: 48px;
+  border-radius: 24px;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 2fr 3fr;
+  place-content: center;
+  column-gap: 1.5vw;
+  row-gap: 0.5vh;
+}
+
+.greeting .profile-picture {
+  grid-row: 1 / -1;
+  height: 72px;
+  border-radius: 36px;
+  justify-self: end;
+  align-self: center;
+}
+
+.greeting .hi {
+  font-size: 0.7rem;
+  align-self: end;
+}
+
+.greeting .user-name {
+  font-size: 1.4rem;
+  align-self: start;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3,80px);
+  column-gap: 1.5vw;
+  align-items: center;
+  justify-items: center;
+}
+
+.buttons button {
+  background-color: dodgerblue;
+  height: 32px;
+  width: 80px;
+  border: none;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  color: white;
+  font-weight: bold;
 }
 
 .content {
   background-color: rgb(230,230,240);
 }
+
