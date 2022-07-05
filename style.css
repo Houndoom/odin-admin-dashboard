@@ -13,6 +13,14 @@ body {
   grid-template-rows: 1fr 4fr;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 /* Sidebar */
 
 .sidebar {
@@ -22,21 +30,30 @@ body {
   grid-template-rows: 100px 1fr 1fr;
 }
 
-.sidebar > div {
+.sidebar > .sidebar-title {
   display: grid;
   grid-template-columns: 1fr 5fr;
   align-items: center;
-  row-gap: 3vh;
   font-size: 1.2rem;
   color: white;
 }
 
-.sidebar div.sidebar-title {
-  font-size: 1.5rem;
+.sidebar .button {
+  border: none;
+  background-color: dodgerblue;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 }
 
-.sidebar #dashboard {
-  viewBox: "0 0 55 55";
+.sidebar div.sidebar-title {
+  font-size: 1.5rem;
 }
 
 .sidebar div img {
@@ -45,6 +62,8 @@ body {
 
 .sidebar .sidebar-2, .sidebar .sidebar-1 {
   align-self: start;
+  display: grid;
+  row-gap: 3vh;
 }
 
 /* Header */
@@ -76,7 +95,7 @@ body {
   padding-left: clamp(4px,1vw,8px);
 }
 
-.search-bar > label {
+.search-bar > button {
   height: 24px;
 }
 
@@ -86,6 +105,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: clamp(12px,3vw,24px);
+}
+
+.user-info > * {
+  cursor: pointer;
 }
 
 .profile-picture {
@@ -133,7 +156,6 @@ body {
   background-color: dodgerblue;
   height: 32px;
   width: 80px;
-  border: none;
   border-radius: 16px;
   font-size: 0.7rem;
   color: white;
@@ -199,11 +221,6 @@ body {
   gap: 0.5vw;
 }
 
-.project-buttons button {
-  border: none;
-  background-color: white;
-}
-
 .right-bar {
   display: grid;
   grid-template-rows: 32px 1fr;
@@ -218,7 +235,7 @@ body {
   background-color: white;
   display: grid;
   border-radius: 10px;
-  padding: 2vh 1vw;
+  padding: 3vh 1.5vw;
   gap: 1vh;
 }
 
@@ -233,6 +250,7 @@ body {
   place-content: center;
   column-gap: 1.5vw;
   row-gap: 0.5vh;
+  cursor: pointer;
 }
 
 .trend .profile-picture {
